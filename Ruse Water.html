@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+  <title>
+    Ruse Water Management Team
+  </title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #0099ff65;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #0099ff8e;
+    }
+
+    .container1 {
+      font-size: 20px;
+    }
+
+    .container {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    /* //h1 {text-align: center} */
+    .flex-container {
+      display: flex;
+      /* flex-direction: row; */
+
+      justify-content: center;
+      line-height: 2rem;
+
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+</head>
+
+<body>
+  <div class="flex-container">
+
+    <img src="./images/Ruse h20.png" alt="Ruse Water" width="100px">
+
+    <div style="text-align: center;">
+      <h1>Ruse Water Management Team</h1>
+      <p style="text-align: center; color: #298aaa">Managed by Ruse Students</p>
+    </div>
+  </div>
+  <hr style="height:5px;border-width:0;color:#298aaa;background-color:gray">
+  <div class="container1">
+    <div class="idk">
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Graphs</a></li>
+        <li><a data-toggle="tab" href="#menu2">Info</a></li>
+        <li><a data-toggle="tab" href="#menu3">Water Audit</a></li>
+        <li><a data-toggle="tab" href="#menu4">Our Story</a></li>
+      </ul>
+    </div>
+    <div class="tab-content" style="font-family:'Times New Roman', Times, serif;">
+      <div id="home" class="tab-pane fade in active">
+        <h3 style="text-align: center;">Home</h3>
+        <p style="text-shadow: blue; text-align: center; font-size: 20px;">Hello, the Ruse Water Management Team is
+          aiming to help reduce water use in our school by implementing water
+          efficient devices or water catchers to help water the farm. We have collated the data we have gotten into
+          different graphs so feel free to check them out. </p>
+          <br>
+          <h3>Todays water usage(Weekdays):</h3>
+          <label id="number"></label>
+          <br>
+          <br>
+          <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
+        <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3 style="text-align: center;">Graphs</h3>
+        <p style="text-align:center;">Requires more data.</p>
+        <p style="text-align: center;">All measurements are in litres.</p>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ9B6pL61oMRFJeVnj1ASFBozpXSuan_cXwaS5L_9ORAk-CN1nHXF8Vbcp0xIMTwx3bPyymy0TGOO0/pubchart?oid=1217480274&amp;format=interactive"></iframe>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ9B6pL61oMRFJeVnj1ASFBozpXSuan_cXwaS5L_9ORAk-CN1nHXF8Vbcp0xIMTwx3bPyymy0TGOO0/pubchart?oid=1377724193&amp;format=interactive"></iframe>
+          <script src="api.js"></script>
+        </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3 style="text-align: center;">Info</h3>
+        <p style="text-align:center;">Requires more data.</p>
+      </div>
+      <div id="menu3" class="tab-pane fade" >
+        <h3 style="text-align: center;">Water Audit</h3>
+        <p style="text-align:center;">Requires more data.</p>
+       
+        <table style="width: 60%;align-self: center;">
+          <tr>
+            <th>Water Audit</th>
+            <th>Water Devices</th>
+            <th>Broken Devices</th>
+            <th>Water-Efficient Devices</th>
+          </tr>
+          <tr>
+            <td>Quadrangle</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+          </tr>
+          <tr>
+            <td>Farm</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+          </tr>
+          <tr>
+            <td>Passive Area</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+          </tr>
+          </table>
+     </div>
+
+     <div id="menu4" class="tab-pane fade">
+       <h3 style="text-align: center;">Our Story</h3>
+       <p style="text-align: center;">When we were first assigned this task our first goal was to locate our school's water
+          meters. We spent one recess finding them and then we spent every day checking the water meters and writing the numbers down. 
+        Then we had a meeting with the principal to discuss how to progress further and to get some previous water bills.(5/11/21)</p> 
+      </div>
+
+
+      <script>
+        function makeApiCall() {
+          var params = {
+            // The ID of the spreadsheet to retrieve data from.
+            spreadsheetId: '16gmHaHckAuRcz4TYiJCgAy0Aqb5RNq2PzowV5Zm8UjM',  // TODO: Update placeholder value.
+    
+            // The A1 notation of the values to retrieve.
+            range: 'Website Sheet!H1:H1',  // TODO: Update placeholder value.
+    
+            // How values should be represented in the output.
+            // The default render option is ValueRenderOption.FORMATTED_VALUE.
+            // valueRenderOption: '',  // TODO: Update placeholder value.
+    
+            // // How dates, times, and durations should be represented in the output.
+            // // This is ignored if value_render_option is
+            // // FORMATTED_VALUE.
+            // // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+            // dateTimeRenderOption: '',  // TODO: Update placeholder value.
+          };
+    
+          var request = gapi.client.sheets.spreadsheets.values.get(params);
+          request.then(function(response) {
+           let numberlabel = document.getElementById("number");
+           numberlabel.innerHTML = response.result.values[0];
+            // TODO: Change code below to process the `response` object:
+            console.log(response.result);
+          }, function(reason) {
+            console.error('error: ' + reason.result.error.message);
+          });
+        }
+    
+        function initClient() {
+          var API_KEY = 'AIzaSyA0P7pOj6AwE1p8sYJgZExHDYy1NjagZUw';  // TODO: Update placeholder with desired API key.
+    
+          var CLIENT_ID = '463831540176-timucm3jhaae95gns69eafi3pt2ac897.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
+    
+          // TODO: Authorize using one of the following scopes:
+          //   'https://www.googleapis.com/auth/drive'
+          //   'https://www.googleapis.com/auth/drive.file'
+          //   'https://www.googleapis.com/auth/drive.readonly'
+          //   'https://www.googleapis.com/auth/spreadsheets'
+          //   'https://www.googleapis.com/auth/spreadsheets.readonly'
+          var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+    
+          gapi.client.init({
+           // 'apiKey': API_KEY,
+            'clientId': CLIENT_ID,
+            'scope': SCOPE,
+            'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+          }).then(function() {
+            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
+            updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          });
+        }
+    
+        function handleClientLoad() {
+          gapi.load('client:auth2', initClient);
+        }
+    
+        function updateSignInStatus(isSignedIn) {
+          if (isSignedIn) {
+            makeApiCall();
+          }
+        }
+    
+        function handleSignInClick(event) {
+          let authInstance = gapi.auth2.getAuthInstance();
+          authInstance.signIn();
+        }
+    
+        function handleSignOutClick(event) {
+          gapi.auth2.getAuthInstance().signOut();
+        }
+        </script>
+        <script async defer src="https://apis.google.com/js/api.js"
+          onload="this.onload=function(){};handleClientLoad()"
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+</body>
+<!-- <script>
+  
+  //Jerry code
+  const url = `https://docs.google.com/spreadsheets/d/16gmHaHckAuRcz4TYiJCgAy0Aqb5RNq2PzowV5Zm8UjM/edit#gid=2067358906`;
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.onreadystatechange = function() { 
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        const json = JSON.parse(xmlHttp.responseText);
+        const number = json.values[0][0];
+        document.getElementById("number").innerHTML = number;
+    }
+}
+xmlHttp.open("GET", url, true);
+xmlHttp.send(null);
+xmlHttp.open("GET", url, true);
+xmlHttp.send(null);
+//Clock Code
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var radius = canvas.height / 2;
+  ctx.translate(radius, radius);
+  radius = radius * 0.90
+  setInterval(drawClock, 1000);
+
+  function drawClock() {
+    drawFace(ctx, radius);
+    drawNumbers(ctx, radius);
+    drawTime(ctx, radius);
+  }
+
+  function drawFace(ctx, radius) {
+    var grad;
+    ctx.beginPath();
+    ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+    grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+    grad.addColorStop(0, '#333');
+    grad.addColorStop(0.5, 'white');
+    grad.addColorStop(1, '#333');
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = radius * 0.1;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+    ctx.fillStyle = '#333';
+    ctx.fill();
+  }
+
+  function drawNumbers(ctx, radius) {
+    var ang;
+    var num;
+    ctx.font = radius * 0.15 + "px arial";
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "center";
+    for (num = 1; num < 13; num++) {
+      ang = num * Math.PI / 6;
+      ctx.rotate(ang);
+      ctx.translate(0, -radius * 0.85);
+      ctx.rotate(-ang);
+      ctx.fillText(num.toString(), 0, 0);
+      ctx.rotate(ang);
+      ctx.translate(0, radius * 0.85);
+      ctx.rotate(-ang);
+    }
+  }
+
+  function drawTime(ctx, radius) {
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour = hour % 12;
+    hour = (hour * Math.PI / 6) +
+      (minute * Math.PI / (6 * 60)) +
+      (second * Math.PI / (360 * 60));
+    drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+    //minute
+    minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+    drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+    // second
+    second = (second * Math.PI / 30);
+    drawHand(ctx, second, radius * 0.9, radius * 0.02);
+  }
+
+  function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0, 0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+  }
+</script> -->
